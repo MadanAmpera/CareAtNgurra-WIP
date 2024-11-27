@@ -13,16 +13,16 @@
 </head>
 <body>
     <main class="main">
-        <section class="mobile-header max-width-container" uk-sticky>
+        <section class="mobile-header max-width-container" uk-sticky="start: 200; end: !.uk-height-large; offset: 80; animation: uk-animation-slide-top">
             <div class="section-grid max-width">
                 <div class="mobile-header-menu-logo">
                     <a href="#offcanvas-usage" uk-icon="icon: menu; ratio: 2" uk-toggle></a>
                     <a href="index.html">
-                        <img src="resources/icons/SUB LOGO 2-cropped.svg" alt="Logo of Care at Ngurra" style="height: 40px; width: auto; transform: scale(1.5); margin-left: 45px;">
+                        <img src="resources/icons/SUB LOGO 2-cropped.svg" alt="Logo of Care at Ngurra" style="height: 40px; width: auto; transform: scale(1.7); margin-left: 55px;">
                     </a>
                 </div>
                 <div class="mobile-header-ndis">
-                    <img src="resources/icons/NDIS-Registered-Provider-2.png" style="height: 40px; width: auto;">
+                    <img src="resources/icons/NDIS-registered-provider-logo.png" style="height: 40px; width: auto; margin-top: 25px;">
                 </div>
             </div>
             <div id="offcanvas-usage" uk-offcanvas>
@@ -59,11 +59,14 @@
             </div>
         </section>
         <section class="site-hero max-width-container">
-            <div>
+            <div class="video-background">
                 <video autoplay muted loop playsinline>
                     <source src="resources/video/site-hero.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <div class="content">
+                    Slide titles will appear here
+                </div>
             </div>
         </section>
         <section class="page-content max-width-container border">
