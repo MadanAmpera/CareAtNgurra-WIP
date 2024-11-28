@@ -9,7 +9,7 @@ body{
     color: rgb(53, 64, 102);
 }
 
-h1,h2{
+h1, h2{
     color: rgb(53, 64, 102) !important;
 }
 
@@ -55,20 +55,22 @@ h1,h2{
     color: rgb(53, 64, 102);   
 }
 
+.mobile-header-elements{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
 .mobile-header-menu-logo{
-    grid-column: 1/6;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 }
 .mobile-header-ndis{
-    grid-column: 6/13;
-    margin-left: auto;
-    margin-right: 0;
+    justify-self: flex-end;
 }
-
-
 
 /* LAYOUT - MENU */
 
@@ -102,33 +104,36 @@ h1,h2{
 .site-hero{
     height: 92vh;
 }
-/* .video-background{
+
+.container {
     position: relative;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-} */
+  }
+  
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Red with opacity */
+    z-index: 1; /* Ensures this div is on top */
+  }
 
-.video-background video {
-    /* position: absolute;
-    top: 50%;
-    left: 50%; */
+video {
     min-width: 100%;
     min-height: 100%;
-    /* z-index: -1;
-    transform: translate(-50%, -50%); */
     object-fit: cover;
 }
-
-/* .video-background .content {
-    position: relative;
-    z-index: 1;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
- */
-
 
 .uk-card-body{
     background-color:rgb(255,  250,  243, 0.2) !important;
