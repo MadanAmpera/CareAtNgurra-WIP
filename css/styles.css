@@ -131,7 +131,7 @@ video {
 }
 
 .service-carousel-image{
-    width: 100%;
+    width: auto;
     height: 300px;
     object-fit: cover;
 }
