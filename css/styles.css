@@ -62,7 +62,7 @@ h1, h2{
     align-items: center;
 }
 
-.mobile-header-menu-logo{
+/* .mobile-header-menu-logo{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -70,7 +70,7 @@ h1, h2{
 }
 .mobile-header-ndis{
     justify-self: flex-end;
-}
+} */
 
 /* LAYOUT - MENU */
 
