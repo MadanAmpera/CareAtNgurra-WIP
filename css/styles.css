@@ -26,6 +26,21 @@ h1, h2{
     color: rgb(255,  250,  243, 1) !important;
 }
 
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(53, 64, 102) !important; /* Button color */
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    z-index: 9999;
+}
+
 /*LAYOUT*/
 
 .max-width-container{
