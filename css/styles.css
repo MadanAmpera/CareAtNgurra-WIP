@@ -135,12 +135,7 @@ video {
     object-fit: cover;
 }
 
-.uk-card-body{
-    background-color:rgb(255,  250,  243, 0.2) !important;
-    color:rgb(53, 64, 102) !important;
-}
-
-.uk-card-title{
+.services-card-body h3, .services-card-body p{
     color:rgb(53, 64, 102) !important;
 }
 
