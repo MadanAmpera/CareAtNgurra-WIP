@@ -11,6 +11,7 @@ body{
 
 h1, h2{
     color: rgb(53, 64, 102) !important;
+    font-weight: bold !important;
 }
 
 .border{
@@ -61,16 +62,6 @@ h1, h2{
     justify-content: space-between;
     align-items: center;
 }
-
-/* .mobile-header-menu-logo{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-}
-.mobile-header-ndis{
-    justify-self: flex-end;
-} */
 
 /* LAYOUT - MENU */
 
