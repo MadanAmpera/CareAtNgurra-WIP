@@ -1,5 +1,7 @@
 /*GLOBAL*/
 
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=League+Spartan:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
 *{
     box-sizing: border-box;
 }
@@ -80,7 +82,10 @@ h1, h2{
 
 /* LAYOUT - MENU */
 
-
+.uk-nav-sub li{
+    font-family: "Merriweather", serif;
+    margin-bottom: 1.5rem !important;
+}
 
 /*LAYOUT - FOOTER*/
 .footer-item{
