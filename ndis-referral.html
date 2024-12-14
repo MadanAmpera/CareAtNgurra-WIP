@@ -62,27 +62,307 @@
                 </div>
             </div>
         </section>
-        <section class="page-hero max-width-container border">
-            <div class="section-grid max-width border">
-                <div>
-                    Page Hero
+        <section class="page-hero max-width-container">
+            <div class="section-grid max-width" style="background-image: url('resources/images/Support-Coordination.webp'); background-size: cover; background-position: center; padding: 0;">
+                <div style="height: 100%; width: 100%; background-color: rgb(255,255,255,0.5); display: flex; justify-content: center; align-items: center;">
+                    <h1 style="text-align: center; margin-top: 1rem;">
+                        NDIS Referral
+                    </h1>
                 </div>
             </div>
         </section>
-        <section class="page-content max-width-container border">
-            <div class="section-grid max-width border">
-                <h1>
-                    Referral
-                </h1>
-                <p>All our staff are expertly trained to provide care supports in a way that is discreet and respectful of your personal boundaries. We make sure our staff are highly trained in Interpersonal skills as well so dignity and independence are maintained at all times.</p>
-            </div>
-        </section>
-        <section class="page-content max-width-container border">
-            <div class="section-grid max-width border">
-                <h2>
-                    Referral Form
-                </h2>
-                <p>(Referral form to be added here)</p>
+        <section class="page-content max-width-container">
+            <div class="section-grid max-width">
+                <h2 style="text-align: center;">Referral Form</h2>
+                <form id="ndis-referral-form" class="uk-form-stacked">
+                        
+                    <legend class="uk-legend">Client Information</legend>
+
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="name">Name</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="name" name="client-name" type="text" placeholder="Client Name" required>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="date-of-birth">Date of Birth</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="date-of-birth" name="client-dob" type="date" placeholder="Client's Date of Birth" required>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="gender">Gender</label>
+                        <div class="uk-form-controls">
+                            <select class="uk-select" id="gender" name="client-gender" required>
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="ndis-number">NDIS Number</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="ndis-number" name="client-ndis-number" type="number" placeholder="Client's NDIS Number" required>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" >Plan Dates</label>
+                        <label class="uk-form-label" for="plan-dates-from">From</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="plan-dates-from" name="plan-from-date" type="date" placeholder="Plan Date From" required>
+                        </div>
+                        <label class="uk-form-label" for="plan-dates-to">To</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="plan-dates-to" name="plan-to-date" type="date" placeholder="Plan Date To" required>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="address">Address</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="address" name="client-address" type="text" placeholder="Client's Address" required>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="phone-number">Phone Number</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="phone-number" name="client-phone-number" type="tel" placeholder="Client's Phone Number" required>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="email">Email</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="email" name="client-email" type="email" placeholder="Client's Email" required>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="cultural-background">Cultural Background</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="cultural-background" name="client-cultural-background" type="text" placeholder="Client's Cultural Background" required>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="nature-of-diability">Nature of Disability/Diagnosis</label>
+                        <textarea class="uk-textarea" id="nature-of-diability" name="client-disability" rows="5" placeholder="Nature of Disability of the Client" aria-label="Textarea" required></textarea>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label">Are there any risks that Care at Ngurra need to be aware of?</label>
+                        <label><input class="uk-radio" type="radio" name="risks-involved" value="Yes" required> Yes</label>
+                        <label><input class="uk-radio" type="radio" name="risks-involved" value="No" required> No</label>
+                        <label><input class="uk-radio" type="radio" name="risks-involved" value="N/A" required> N/A</label>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="risks-identified">Risks Identified</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="risks-identified" name="risks-identified" type="text" placeholder="Risks Identified" required>
+                        </div>
+                    </div>
+                
+                
+                    <legend class="uk-legend">Referral Details</legend>
+
+                    <div class="uk-margin">
+                        <label class="uk-form-label">Does the client currently have an NDIS Plan?</label>
+                        <label><input class="uk-radio" type="radio" name="client-has-ndis-plan" value="Yes" required> Yes</label>
+                        <label><input class="uk-radio" type="radio" name="client-has-ndis-plan" value="No" required> No</label>
+                        <label><input class="uk-radio" type="radio" name="client-has-ndis-plan" value="N/A" required> N/A</label>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label">Has a copy of the NDIS Plan been provided along with this referral?</label>
+                        <label><input class="uk-radio" type="radio" name="copy-provided" value="Yes" required> Yes</label>
+                        <label><input class="uk-radio" type="radio" name="copy-provided" value="No" required> No</label>
+                        <label><input class="uk-radio" type="radio" name="copy-provided" value="N/A" required> N/A</label>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label">Does the client need support getting a NDIS Plan?</label>
+                        <label><input class="uk-radio" type="radio" name="ndis-support-needed" value="Yes" required> Yes</label>
+                        <label><input class="uk-radio" type="radio" name="ndis-support-needed" value="No" required> No</label>
+                        <label><input class="uk-radio" type="radio" name="ndis-support-needed" value="N/A" required> N/A</label>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="support-areas">Does the client require particular support in any of the following areas?</label>
+                        <select class="uk-select" id="support-areas" name="support-areas" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="Level 2: Support Coordination">Level 2: Support Coordination</option>
+                            <option value="Level 3: Specialist Support Coordination">Level 3: Specialist Support Coordination</option>
+                        </select>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label">In Home Support: </label>
+                        <label><input class="uk-radio" type="radio" name="in-home-support" value="Yes" required> Yes</label>
+                        <label><input class="uk-radio" type="radio" name="in-home-support" value="No" required> No</label>
+                        <label><input class="uk-radio" type="radio" name="in-home-support" value="N/A" required> N/A</label>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label">Mentoring: </label>
+                        <div class="uk-form-controls">
+                            <select class="uk-select" id="mentor-gender" name="mentor-gender">
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                <option value="N/A">N/A</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label><input class="uk-radio" type="radio" name="mentoring" value="Yes" required> Yes</label>
+                        <label><input class="uk-radio" type="radio" name="mentoring" value="No" required> No</label>
+                        <label><input class="uk-radio" type="radio" name="mentoring" value="N/A" required> N/A</label>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label">Staff Preference: </label>
+                        <div class="uk-form-controls">
+                            <select class="uk-select" id="staff-preference" name="staff-preference">
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                <option value="None">None</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label">Staff cultural background preference: </label>
+                        <div class="uk-form-controls">
+                            <select class="uk-select" id="staff-cultural-preference" name="staff-cultural-preference">
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="Aboriginal">Aboriginal</option>
+                                <option value="Open">Open</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                
+                    <legend class="uk-legend">Members Of The Household</legend>
+
+                    <div class="uk-margin">
+                        <label class="uk-form-label">Member 1:</label>
+                        <input class="uk-input" type="text" name="household-member-1-name" placeholder="Full Name">
+                        <input class="uk-input" type="date" name="household-member-1-DOB" placeholder="Date of Birth">
+                        <div class="uk-form-controls">
+                            <select class="uk-select" name="household-member-1-gender">
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label">Member 2:</label>
+                        <input class="uk-input" type="text" name="household-member-2-name" placeholder="Full Name">
+                        <input class="uk-input" type="date" name="household-member-2-DOB" placeholder="Date of Birth">
+                        <div class="uk-form-controls">
+                            <select class="uk-select" name="household-member-2-gender">
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label">Member 3:</label>
+                        <input class="uk-input" type="text" name="household-member-3-name" placeholder="Full Name">
+                        <input class="uk-input" type="date" name="household-member-3-DOB" placeholder="Date of Birth">
+                        <div class="uk-form-controls">
+                            <select class="uk-select" name="household-member-3-gender">
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label">Member 4:</label>
+                        <input class="uk-input" type="text" name="household-member-4-name" placeholder="Full Name">
+                        <input class="uk-input" type="date" name="household-member-4-DOB" placeholder="Date of Birth">
+                        <div class="uk-form-controls">
+                            <select class="uk-select" name="household-member-4-gender">
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label">Member 5:</label>
+                        <input class="uk-input" type="text" name="household-member-5-name" placeholder="Full Name">
+                        <input class="uk-input" type="date" name="household-member-5-DOB" placeholder="Date of Birth">
+                        <div class="uk-form-controls">
+                            <select class="uk-select" name="household-member-5-gender">
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label">Member 6:</label>
+                        <input class="uk-input" type="text" name="household-member-6-name" placeholder="Full Name">
+                        <input class="uk-input" type="date" name="household-member-6-DOB" placeholder="Date of Birth">
+                        <div class="uk-form-controls">
+                            <select class="uk-select" name="household-member-6-gender">
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="referrer-name">Name</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="referrer-name" name="referrer-name" type="text" placeholder="Referrer Name" required>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="referrer-position">Position</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="referrer-position" name="referrer-position" type="text" placeholder="Referrer Position" required>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="referrer-organization">Organization</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="referrer-organization" name="referrer-organization" type="text" placeholder="Referrer Organization" required>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="referrer-address">Address</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="referrer-address" name="referrer-address" type="text" placeholder="Referrer Address" required>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="referrer-phone">Phone</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="referrer-phone" name="referrer-phone" type="text" placeholder="Referrer Phone" required>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="referrer-email">Email</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="referrer-email" name="referrer-email" type="text" placeholder="Referrer Phone" required>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="referral-date">Date</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="referral-date" name="referral-date" type="date" placeholder="Referral Date" required>
+                        </div>
+                    </div>
+                        
+                    <div style="display: flex; direction: row; justify-content: flex-end; align-items: center;">
+                        <input class="uk-button uk-button-default" style="color: rgb(255,  250,  243, 1); background-color: rgb(53, 64, 102);" type="submit" value="Submit">
+                    </div>
+                    
+                </form>
             </div>
         </section>
         <hr class="uk-divider-icon">
@@ -115,5 +395,6 @@
             <p style="color: rgb(255,  250,  243, 1); margin-bottom: 0px;">Copyright 2024, Care at Ngurra</p>
         </div>
     </main>
+    
 </body>
 </html>
