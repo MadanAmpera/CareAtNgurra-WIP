@@ -74,25 +74,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     Mentoring: $mentoring - Mentor Gender Preference: $mentor_gender
     Staff Preference: $staff_gender_preference
     Staff cultural background preference: $staff_gender_preference
-    EOD
+    EOD;
 
     //compiling household members list
 
     for ($i = 0; $i < count($household_names); $i++) {
         $household_members .= "Member " . ($i + 1) . "\n";
         $household_members .= "Full Name " . $household_names[$i] . "\n";
-        $household_members .= "DOB: " . $household_dob[$i] . "\n\n";
-        $household_members .= "Gender: " . $household_genders[$i] . "\n";
+        $household_members .= "DOB: " . $household_dob[$i] . "\n";
+        $household_members .= "Gender: " . $household_genders[$i] . "\n\n";
     }
-
-
-    $referrer_name = isset($_POST['referrer-name']) ? htmlspecialchars($_POST['referrer-name']) : '';
-    $referrer_position = isset($_POST['referrer-position']) ? htmlspecialchars($_POST['referrer-position']) : '';
-    $referrer_organization = isset($_POST['referrer-organization']) ? htmlspecialchars($_POST['referrer-organization']) : '';
-    $referrer_address = isset($_POST['referrer-address']) ? htmlspecialchars($_POST['referrer-address']) : '';
-    $referrer_phone = isset($_POST['referrer-phone']) ? htmlspecialchars($_POST['referrer-phone']) : '';
-    $referrer_email = isset($_POST['referrer-email']) ? htmlspecialchars($_POST['referrer-email']) : '';
-    $referral_date = isset($_POST['referral-date']) ? htmlspecialchars($_POST['referral-date']) : '';
 
     $referrer_details_body = <<<EOD
     Name: $referrer_name
@@ -102,16 +93,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     Phone: $referrer_phone
     Email: $referrer_email
     Date: $referral_date
-    EOD
+    EOD;
 
     //compiling the final body
 
-    $mail_body .= "NDIS REFERRAL FORM\n";
-    $mail_body .= "CLIENT INFORMATION\n" . $client_information_body . "\n";
-    $mail_body .= "REFERRAL DETAILS\n" . $referral_details_body . "\n";
+    $mail_body .= "NDIS REFERRAL FORM\n\n";
+    $mail_body .= "CLIENT INFORMATION\n" . $client_information_body . "\n\n";
+    $mail_body .= "REFERRAL DETAILS\n" . $referral_details_body . "\n\n";
 
     if(!empty($household_members)){
-        $mail_body .= "MEMBERS OF THE HOUSEHOLD\n" . $household_members . "\n";
+        $mail_body .= "MEMBERS OF THE HOUSEHOLD\n" . $household_members . "\n\n";
     }
 
     $mail_body .= "REFERRER DETAILS\n" . $referrer_details_body . "\n";
