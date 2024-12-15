@@ -213,7 +213,7 @@
                     <div class="uk-margin">
                         <label class="uk-form-label">Staff Preference: </label>
                         <div class="uk-form-controls">
-                            <select class="uk-select" id="staff-preference" name="staff-preference">
+                            <select class="uk-select" id="staff-gender-preference" name="staff-gender-preference">
                                 <option value="" disabled selected>Select an option</option>
                                 <option value="Female">Female</option>
                                 <option value="Male">Male</option>
@@ -237,10 +237,10 @@
 
                     <div class="uk-margin">
                         <label class="uk-form-label">Member 1:</label>
-                        <input class="uk-input" type="text" name="household-member-1-name" placeholder="Full Name">
-                        <input class="uk-input" type="date" name="household-member-1-DOB" placeholder="Date of Birth">
+                        <input class="uk-input" type="text" name="household-member-name[]" placeholder="Full Name">
+                        <input class="uk-input" type="date" name="household-member-DOB[]" placeholder="Date of Birth">
                         <div class="uk-form-controls">
-                            <select class="uk-select" name="household-member-1-gender">
+                            <select class="uk-select" name="household-member-gender[]">
                                 <option value="" disabled selected>Select an option</option>
                                 <option value="Female">Female</option>
                                 <option value="Male">Male</option>
@@ -250,10 +250,10 @@
                     </div>
                     <div class="uk-margin">
                         <label class="uk-form-label">Member 2:</label>
-                        <input class="uk-input" type="text" name="household-member-2-name" placeholder="Full Name">
-                        <input class="uk-input" type="date" name="household-member-2-DOB" placeholder="Date of Birth">
+                        <input class="uk-input" type="text" name="household-member-name[]" placeholder="Full Name">
+                        <input class="uk-input" type="date" name="household-member-DOB[]" placeholder="Date of Birth">
                         <div class="uk-form-controls">
-                            <select class="uk-select" name="household-member-2-gender">
+                            <select class="uk-select" name="household-member-gender[]">
                                 <option value="" disabled selected>Select an option</option>
                                 <option value="Female">Female</option>
                                 <option value="Male">Male</option>
@@ -263,10 +263,10 @@
                     </div>
                     <div class="uk-margin">
                         <label class="uk-form-label">Member 3:</label>
-                        <input class="uk-input" type="text" name="household-member-3-name" placeholder="Full Name">
-                        <input class="uk-input" type="date" name="household-member-3-DOB" placeholder="Date of Birth">
+                        <input class="uk-input" type="text" name="household-member-name[]" placeholder="Full Name">
+                        <input class="uk-input" type="date" name="household-member-DOB[]" placeholder="Date of Birth">
                         <div class="uk-form-controls">
-                            <select class="uk-select" name="household-member-3-gender">
+                            <select class="uk-select" name="household-member-gender[]">
                                 <option value="" disabled selected>Select an option</option>
                                 <option value="Female">Female</option>
                                 <option value="Male">Male</option>
@@ -276,10 +276,10 @@
                     </div>
                     <div class="uk-margin">
                         <label class="uk-form-label">Member 4:</label>
-                        <input class="uk-input" type="text" name="household-member-4-name" placeholder="Full Name">
-                        <input class="uk-input" type="date" name="household-member-4-DOB" placeholder="Date of Birth">
+                        <input class="uk-input" type="text" name="household-member-name[]" placeholder="Full Name">
+                        <input class="uk-input" type="date" name="household-member-DOB[]" placeholder="Date of Birth">
                         <div class="uk-form-controls">
-                            <select class="uk-select" name="household-member-4-gender">
+                            <select class="uk-select" name="household-member-gender[]">
                                 <option value="" disabled selected>Select an option</option>
                                 <option value="Female">Female</option>
                                 <option value="Male">Male</option>
@@ -289,10 +289,10 @@
                     </div>
                     <div class="uk-margin">
                         <label class="uk-form-label">Member 5:</label>
-                        <input class="uk-input" type="text" name="household-member-5-name" placeholder="Full Name">
-                        <input class="uk-input" type="date" name="household-member-5-DOB" placeholder="Date of Birth">
+                        <input class="uk-input" type="text" name="household-member-name[]" placeholder="Full Name">
+                        <input class="uk-input" type="date" name="household-member-DOB[]" placeholder="Date of Birth">
                         <div class="uk-form-controls">
-                            <select class="uk-select" name="household-member-5-gender">
+                            <select class="uk-select" name="household-member-gender[]">
                                 <option value="" disabled selected>Select an option</option>
                                 <option value="Female">Female</option>
                                 <option value="Male">Male</option>
@@ -302,10 +302,10 @@
                     </div>
                     <div class="uk-margin">
                         <label class="uk-form-label">Member 6:</label>
-                        <input class="uk-input" type="text" name="household-member-6-name" placeholder="Full Name">
-                        <input class="uk-input" type="date" name="household-member-6-DOB" placeholder="Date of Birth">
+                        <input class="uk-input" type="text" name="household-member-name[]" placeholder="Full Name">
+                        <input class="uk-input" type="date" name="household-member-DOB[]" placeholder="Date of Birth">
                         <div class="uk-form-controls">
-                            <select class="uk-select" name="household-member-6-gender">
+                            <select class="uk-select" name="household-member-gender[]">
                                 <option value="" disabled selected>Select an option</option>
                                 <option value="Female">Female</option>
                                 <option value="Male">Male</option>
@@ -314,7 +314,8 @@
                         </div>
                     </div>
                     
-                
+                    <legend class="uk-legend">Referrer Details</legend>
+
                     <div class="uk-margin">
                         <label class="uk-form-label" for="referrer-name">Name</label>
                         <div class="uk-form-controls">
