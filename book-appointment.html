@@ -74,49 +74,50 @@
 
         <section class="page-content max-width-container">
             <div class="section-grid max-width">
-                <form class="uk-form-stacked" style="margin-top: 1em;">
+                <form class="uk-form-stacked" style="margin-top: 1em;" action="book-appointment.php" method="post">
                     <div class="uk-margin">
                         <label class="uk-form-label" for="select-service">Select Service</label>
                         <div class="uk-form-controls">
-                            <select class="uk-select" id="select-service">
-                                <option>Supported Independent Living</option>
-                                <option>Support Coordination</option>
-                                <option>Free NDIS Program Support</option>
-                                <option>Short Term Accommodation</option>
-                                <option>Assisting with Daily Personal Activities</option>
-                                <option>Community Participation</option>
-                                <option>Helping with Household Tasks</option>
-                                <option>Assisting with Transport</option>
+                            <select class="uk-select" id="select-service" name="ndis-service" required>
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="Supported Independent Living">Supported Independent Living</option>
+                                <option value="Support Coordination">Support Coordination</option>
+                                <option value="Free NDIS Program Support">Free NDIS Program Support</option>
+                                <option value="Short Term Accommodation">Short Term Accommodation</option>
+                                <option value="Assisting with Daily Personal Activities">Assisting with Daily Personal Activities</option>
+                                <option value="Community Participation">Community Participation</option>
+                                <option value="Helping with Household Tasks">Helping with Household Tasks</option>
+                                <option value="Assisting with Transport">Assisting with Transport</option>
                             </select>
                         </div>
                     </div>
                     <div class="uk-margin">
                         <label class="uk-form-label" for="appointment-date">Date of Appointment</label>
                         <div class="uk-form-controls">
-                            <input class="uk-input" id="appointment-date" type="datetime-local" placeholder="Some text...">
+                            <input class="uk-input" id="appointment-date" name="appointment-date" type="datetime-local" required>
                         </div>
                     </div>
                     <div class="uk-margin">
                         <label class="uk-form-label" for="email">Email</label>
                         <div class="uk-form-controls">
-                            <input class="uk-input" id="email" type="email" placeholder="Your Email Address">
+                            <input class="uk-input" id="email" name="email" type="email" placeholder="Your Email Address" required>
                         </div>
                     </div>
                     <div class="uk-margin">
                         <label class="uk-form-label" for="name">Name</label>
                         <div class="uk-form-controls">
-                            <input class="uk-input" id="name" type="text" placeholder="Your Name">
+                            <input class="uk-input" id="name" name="name" type="text" placeholder="Your Name" required>
                         </div>
                     </div>
                     <div class="uk-margin">
                         <label class="uk-form-label" for="phone">Phone</label>
                         <div class="uk-form-controls">
-                            <input class="uk-input" id="phone" type="tel" placeholder="Your Number">
+                            <input class="uk-input" id="phone" name="phone" type="tel" placeholder="Your Number" required>
                         </div>
                     </div>
-                    <label class="uk-form-label" for="form-stacked-select">Description</label>
+                    <label class="uk-form-label" for="description">Description</label>
                     <div class="uk-margin">
-                        <textarea class="uk-textarea" rows="5" placeholder="Description of what are you looking for" aria-label="Textarea"></textarea>
+                        <textarea class="uk-textarea" id="description" name="description" rows="5" placeholder="Description of what are you looking for" aria-label="Textarea" required></textarea>
                     </div>
                     
                     <input class="uk-button uk-button-default" style="color: rgb(255,  250,  243, 1); background-color: rgb(53, 64, 102);" type="submit" value="Submit">
@@ -154,5 +155,16 @@
             <p style="color: rgb(255,  250,  243, 1); margin-bottom: 0px;">Copyright 2024, Care at Ngurra</p>
         </div>
     </main>
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const status = urlParams.get('email_sent');
+            if (status === 'success') {
+                alert('Email sent successfully!');
+            } else if (status === 'fail') {
+                alert('Failed to send email. Please try again.');
+            }
+        };
+    </script>
 </body>
 </html>

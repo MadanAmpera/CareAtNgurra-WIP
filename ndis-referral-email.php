@@ -1,5 +1,7 @@
 <?php
 
+//Email 1: To team at Care at Ngurra
+
 //client info
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -95,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     Date: $referral_date
     EOD;
 
-    //compiling the final body
+    //Compiling the email
 
     $mail_body .= "NDIS REFERRAL FORM\n\n";
     $mail_body .= "CLIENT INFORMATION\n" . $client_information_body . "\n\n";
@@ -108,13 +110,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail_body .= "REFERRER DETAILS\n" . $referrer_details_body . "\n";
 
 
-    $to = 'madanamperayani@gmail.com';
-    $headers = 'From: info@careatngurra.com.au';
+    $to = 'info@careatngurra.com.au';
+    $headers = 'From: careatng@careatngurra.com.au';
 
     if (mail($to, $subject, $mail_body, $headers)) {
-        echo 'Email successfully sent!';
+        header("Location: ndis-referral.html?email_sent=success");
+        exit();
     } else {
-        echo 'Failed to send email.';
+        header("Location: ndis-referral.html?email_sent=fail");
+        exit();
     }
 }
 
