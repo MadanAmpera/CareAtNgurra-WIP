@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/uikit.my-theme.min.css" />
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
+    <!-- Google reCAPTCHA --><script src="https://www.google.com/recaptcha/api.js" async defer></script> 
     <title>Care at Ngurra - NDIS Referral</title>
 </head>
 <body>
@@ -359,6 +360,9 @@
                         </div>
                     </div>
                     
+                    <div class="g-recaptcha" data-sitekey="6LeKQbAqAAAAALbviKo24Ivtm5ura3pYgn6hlwnN"></div>
+                    <br/>
+
                     <input class="uk-button uk-button-default" style="color: rgb(255,  250,  243, 1); background-color: rgb(53, 64, 102);" type="submit" value="Submit">
                     
                 </form>
@@ -397,11 +401,13 @@
     <script>
         window.onload = function() {
             const urlParams = new URLSearchParams(window.location.search);
-            const status = urlParams.get('email_sent');
+            const status = urlParams.get('response');
             if (status === 'success') {
                 alert('Email sent successfully!');
             } else if (status === 'fail') {
                 alert('Failed to send email. Please try again.');
+            }else if(status === 'captcha-fail'){
+                alert('Captcha verification failed. Please try again.');
             }
         };
     </script>
