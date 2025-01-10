@@ -1,59 +1,50 @@
-:root {
-    --primary-color: #fff; /* try #212121 also for dark mode */
-    --background-color: #212121;
-    --font: sans-serif;
-  }
   
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .timeline-container {
-    background: var(--background-color);
-    font-family: var(--font);
+.timeline-container {
     display: flex;
     justify-content: center;
-  }
-  
-  /* Timeline Container */
-  .timeline {
-    background: var(--primary-color);
+}
+
+/* Timeline Container */
+.timeline {
     margin: 20px auto;
     padding: 20px;
-  }
-  
-  /* Outer Layer with the timeline border */
-  .outer {
-    border-left: 2px solid #333;
-  }
-  
-  /* Card container */
-  .card {
+}
+
+/* Outer Layer with the timeline border */
+.outer {
+    border-left: 2px solid rgb(53, 64, 102);
+}
+
+/* Card container */
+.card {
     position: relative;
     margin: 0 0 20px 20px;
     padding: 10px;
-    background: #333;
-    color: gray;
+    background: rgb(53, 64, 102);
+    color: rgb(250,  244,  238);
     border-radius: 8px;
     max-width: 400px;
-  }
-  
-  /* Information about the timeline */
-  .info {
+}
+
+/* Information about the timeline */
+.info {
     display: flex;
     flex-direction: column;
     gap: 10px;
-  }
-  
-  /* Title of the card */
-  .title {
-    color: orangered;
+}
+
+.info p{
+    margin: 0;
+}
+
+/* Title of the card */
+.title {
+    color: rgb(250,  244,  238);
     position: relative;
-  }
-  
-  /* Timeline dot  */
-  .title::before {
+}
+
+/* Timeline dot  */
+.title::before {
     content: "";
     position: absolute;
     width: 10px;
@@ -61,6 +52,6 @@
     background: white;
     border-radius: 999px;
     left: -39px;
-    border: 3px solid orangered;
-  }
+    border: 3px solid rgb(140, 198, 64);
+}
   
