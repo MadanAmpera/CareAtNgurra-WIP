@@ -3,16 +3,16 @@
 //client info
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $recaptcha_secret = '6LeKQbAqAAAAALbviKo24Ivtm5ura3pYgn6hlwnN';
-    $recaptcha_response = $_POST['g-recaptcha-response'];
-    //checking the captcha
-    $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptcha_secret&response=$recaptcha_response");
-    $response_keys = json_decode($response, true);
+    // $recaptcha_secret = '6LeKQbAqAAAAALbviKo24Ivtm5ura3pYgn6hlwnN';
+    // $recaptcha_response = $_POST['g-recaptcha-response'];
+    // //checking the captcha
+    // $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptcha_secret&response=$recaptcha_response");
+    // $response_keys = json_decode($response, true);
 
-    if (intval($response_keys["success"]) !== 1) {
-        header("Location: book-appointment.html?response=captcha-fail");
-    }
-    else{
+    // if (intval($response_keys["success"]) !== 1) {
+    //     header("Location: book-appointment.html?response=captcha-fail");
+    // }
+    // else{
         $appointment_ndis_service = isset($_POST['ndis-service']) ? htmlspecialchars($_POST['ndis-service']) : '';
         $appointment_date = isset($_POST['appointment-date']) ? htmlspecialchars($_POST['appointment-date']) : '';
         $appointment_email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : '';
@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             header("Location: book-appointment.html?response=fail");
         }
-    }
+    //}
 
     exit();
 }

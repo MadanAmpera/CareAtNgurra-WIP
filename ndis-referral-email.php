@@ -5,16 +5,16 @@
 //client info
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $recaptcha_secret = '6LeKQbAqAAAAALbviKo24Ivtm5ura3pYgn6hlwnN';
-    $recaptcha_response = $_POST['g-recaptcha-response'];
-    //checking the captcha
-    $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptcha_secret&response=$recaptcha_response");
-    $response_keys = json_decode($response, true);
+    // $recaptcha_secret = '6LeKQbAqAAAAALbviKo24Ivtm5ura3pYgn6hlwnN';
+    // $recaptcha_response = $_POST['g-recaptcha-response'];
+    // //checking the captcha
+    // $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptcha_secret&response=$recaptcha_response");
+    // $response_keys = json_decode($response, true);
 
-    if (intval($response_keys["success"]) !== 1) {
-        header("Location: ndis-referral.html?response=captcha-fail");
-    }
-    else{
+    // if (intval($response_keys["success"]) !== 1) {
+    //     header("Location: ndis-referral.html?response=captcha-fail");
+    // }
+    // else{
 
         $client_name = isset($_POST['client-name']) ? htmlspecialchars($_POST['client-name']) : '';
         $client_dob = isset($_POST['client-dob']) ? htmlspecialchars($_POST['client-dob']) : '';
@@ -178,7 +178,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             header("Location: ndis-referral.html?response=fail");
         }
-    }
+    //}
 
     exit();
 }
