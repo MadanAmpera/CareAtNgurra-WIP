@@ -12,7 +12,7 @@
 
 /* Outer Layer with the timeline border */
 .outer {
-    border-left: 2px solid rgb(53, 64, 102);
+    border-left: 2px solid rgb(53, 64, 102, 0.8);
 }
 
 /* Card container */
@@ -20,7 +20,7 @@
     position: relative;
     margin: 0 0 20px 20px;
     padding: 10px;
-    background: rgb(53, 64, 102);
+    background: rgb(53, 64, 102, 0.8);
     color: rgb(250,  244,  238);
     border-radius: 8px;
     max-width: 400px;
@@ -33,10 +33,13 @@
     gap: 10px;
 }
 
-.info p{
+.info p,.info h3{
     margin: 0;
 }
-
+.info h4{
+    color: rgb(250,  244,  238);
+    margin-top: 0;
+}
 /* Title of the card */
 .title {
     color: rgb(250,  244,  238);
@@ -49,7 +52,7 @@
     position: absolute;
     width: 10px;
     height: 10px;
-    background: white;
+    background: rgb(250,  244,  238);
     border-radius: 999px;
     left: -39px;
     border: 3px solid rgb(140, 198, 64);
