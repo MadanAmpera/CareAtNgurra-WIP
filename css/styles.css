@@ -173,3 +173,9 @@ video {
     justify-self: center;
     align-self: center;
 }
+
+/* HTML FORM CHECK */
+.answer-reason{
+    position: absolute;
+    left: -9999px;
+}

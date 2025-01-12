@@ -73,7 +73,7 @@
         </section>
         <section class="page-content max-width-container">
             <div class="section-grid max-width">
-                <form class="uk-form-stacked" action="expression-of-interest.php" method="post">
+                <form id="expression-of-interest-form" class="uk-form-stacked">
                     <legend class="uk-legend">Expression of Interest</legend>
                     <div class="uk-margin">
                         <label class="uk-form-label" for="first-name">First Name</label>
@@ -103,6 +103,9 @@
                     <div class="uk-margin">
                         <textarea class="uk-textarea" id="message" name="message" rows="5" placeholder="Message" aria-label="Textarea" required></textarea>
                     </div>
+
+                    <input type="text" id="answer-reason" name="answer-reason" class="answer-reason" tabindex="-1" autocomplete="off" placeholder="answer reason">
+
                     <input class="uk-button uk-button-default" style="color: rgb(250,  244,  238); background-color: rgb(53, 64, 102);" type="submit" value="Send">
                 </form>
             </div>
@@ -140,13 +143,39 @@
     <script>
         window.onload = function() {
             const urlParams = new URLSearchParams(window.location.search);
-            const status = urlParams.get('email_sent');
+            const status = urlParams.get('response');
             if (status === 'success') {
                 alert('Email sent successfully!');
             } else if (status === 'fail') {
                 alert('Failed to send email. Please try again.');
+            }else if(status === 'captcha-fail'){
+                alert('Captcha verification failed. Please try again.');
             }
         };
+
+        document.getElementById('expression-of-interest-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            var form = event.target;
+            var answerCheck = document.getElementById('answer-reason').value;
+
+            if (answerCheck === '') {
+
+                if (form.reportValidity()) {
+                    
+                    var formData = new FormData(form);
+                    fetch('expression-of-interest.php', {
+                        method: 'POST',
+                        body: formData
+                    }).catch(error => {
+                        console.error('Error:', error);
+                    });
+                }
+            } else {
+                window.location.href = 'careers.html?response=success';
+            }
+        });
+        
     </script>
 </body>
 </html>

@@ -76,7 +76,7 @@
         <section class="page-content max-width-container">
             <div class="section-grid max-width">
                 <h2 style="text-align: center;">Referral Form</h2>
-                <form class="uk-form-stacked" action="ndis-referral-email.php" method="post">
+                <form id="ndis-referral-form" class="uk-form-stacked">
                         
                     <legend class="uk-legend">Client Information</legend>
 
@@ -161,7 +161,6 @@
                         </div>
                     </div>
                 
-                
                     <legend class="uk-legend">Referral Details</legend>
 
                     <div class="uk-margin">
@@ -233,7 +232,6 @@
                             </select>
                         </div>
                     </div>
-                    
                 
                     <legend class="uk-legend">Members Of The Household</legend>
 
@@ -361,6 +359,9 @@
                         </div>
                     </div>
                     
+                    <input type="text" id="answer-reason" name="answer-reason" class="answer-reason" tabindex="-1" autocomplete="off" placeholder="answer reason">
+
+
                     <!-- <div class="g-recaptcha" data-sitekey="6LeKQbAqAAAAALbviKo24Ivtm5ura3pYgn6hlwnN"></div>
                     <br/> -->
 
@@ -411,6 +412,29 @@
                 alert('Captcha verification failed. Please try again.');
             }
         };
+
+        document.getElementById('ndis-referral-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            var form = event.target;
+            var answerCheck = document.getElementById('answer-reason').value;
+
+            if (answerCheck === '') {
+                
+                if (form.reportValidity()) {
+                    
+                    var formData = new FormData(form);
+                    fetch('ndis-referral-email.php', {
+                        method: 'POST',
+                        body: formData
+                    }).catch(error => {
+                        console.error('Error:', error);
+                    });
+                }
+            } else {
+                window.location.href = 'ndis-referral.html?response=success';
+            }
+        });
     </script>
 </body>
 </html>

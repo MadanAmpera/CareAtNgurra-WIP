@@ -19,16 +19,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     Message: $eoi_message
     EOD;
 
-    $to = 'info@careatngurra.com.au';
+    $to = 'sbaidwan@careatngurra.com.au';
     $headers = 'From: careatng@careatngurra.com.au';
 
     if (mail($to, $subject, $mail_body, $headers)) {
-        header("Location: careers.html?email_sent=success");
-        exit();
+
+        //send email to applicant.
+        $applicant_email_headers = 'From: info@careatngurra.com.au';
+        $applicant_email_subject = 'Thank You for Reaching Out to Care at Ngurra.';
+
+        $applicant_email_body = <<<EOD
+        Dear $eoi_first_name,
+
+        Thank you for your interest in careers at Care at Ngurra. We appreciate you taking the time to express your interest.
+
+        Our team will review your application and respond shortly. 
+        
+        Warm regards,
+        The Care at Ngurra Team
+        EOD;
+
+        mail($eoi_email, $applicant_email_subject, $applicant_email_body, $applicant_email_headers);
+
+        header("Location: careers.html?response=success");
+        
     } else {
-        header("Location: careers.html?email_sent=false");
-        exit();
+        header("Location: careers.html?response=false");
+        
     }
+
+    exit();
 }
 
 ?>
