@@ -93,12 +93,14 @@ h1, h2{
 }
 
 /*LAYOUT - FOOTER*/
+
 .footer-item{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
+
 .footer-flags{
     display: flex;
     flex-direction: row;
@@ -106,6 +108,7 @@ h1, h2{
 .footer-copyright{
     text-align: center;
 }
+
 /* LAYOUT */
 
 .page-hero{
