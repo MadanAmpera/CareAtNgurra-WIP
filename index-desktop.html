@@ -14,14 +14,16 @@
 <body>
     <main class="main">
         <section class="mobile-header max-width-container" uk-sticky="show-on-up: true; animation: uk-animation-slide-top">
-            <div class="mobile-header-elements max-width">
-                <a href="#offcanvas-usage" uk-icon="icon: menu; ratio: 2" uk-toggle></a>
-                <a href="index.html">
-                    <img src="resources/icons/SUB LOGO 2-cropped.svg" alt="Logo of Care at Ngurra" style="height: 40px; width: auto; margin-bottom: 12px;">
-                </a>
-                <img src="resources/icons/ndis-01.png" alt="registered ndis provider logo" style="height: 50px; width: auto;">
+            <div class="max-width">
+                <div class="mobile-header-elements">
+                    <!-- <a href="#offcanvas-usage" uk-icon="icon: menu; ratio: 2" uk-toggle></a> -->
+                    <a href="index.html">
+                        <img src="resources/icons/SUB LOGO 2-cropped.svg" alt="Logo of Care at Ngurra" style="height: 40px; width: auto; margin-bottom: 12px;">
+                    </a>
+                    <img src="resources/icons/ndis-01.png" alt="registered ndis provider logo" style="height: 50px; width: auto;">
+                </div>
             </div>
-            <div id="offcanvas-usage" uk-offcanvas>
+            <!-- <div id="offcanvas-usage" uk-offcanvas>
                 <div class="uk-offcanvas-bar">
             
                     <button class="uk-offcanvas-close" type="button" uk-close></button>
@@ -60,8 +62,12 @@
                         </div>
                     </div>
                 </div>
+            </div> -->
+            <div>
+                Navbar here
             </div>
         </section>
+        
         <section class="site-hero max-width-container">
             <div class="container">
                 <video autoplay muted loop playsinline preload="auto" class="background">
@@ -90,7 +96,7 @@
                 <h1 style="text-align: center;">
                     Registered NDIS provider in Adelaide
                 </h1>
-                <div class="about-us-image">
+                <div style="width: 100%; height: auto; display: flex; justify-content: center;">
                     <img src="resources/images/registered-ndis-provider.webp" alt="Team of Care at Ngurra" style="object-fit: cover; padding: 7px;">
                 </div>
                 
@@ -122,107 +128,111 @@
                 </h2>
                 <div class="uk-slider-container-offset" style="margin: 0px;" uk-slider="autoplay: true; autoplay-interval:3000; pause-on-hover:true;">
 
-                    <div id="carousel-items" class="uk-slider-items uk-child-width-1-1 uk-grid">
-                        <div>
-                            <div class="uk-card uk-card-default carousel-card-full-height">
-                                <div class="uk-card-media-top">
-                                    <img src="resources/images/Supported-Indipendedaant-Living.webp" class="service-carousel-image" alt="Image showing Supported Independent Living">
+                    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+                
+                        <div class="uk-slider-items uk-child-width-1-1 uk-grid">
+                            <div>
+                                <div class="uk-card uk-card-default">
+                                    <div class="uk-card-media-top">
+                                        <img src="resources/images/Supported-Indipendedaant-Living.webp" class="service-carousel-image" alt="Image showing Supported Independent Living">
+                                    </div>
+                                    <div class="uk-card-body services-card-body">
+                                        <h3 class="uk-card-title">Supported Independent Living</h3>
+                                        <p>Empowering you to live independently with personalized support and a comfortable,
+                                            safe home environment.</p>
+                                    </div>
                                 </div>
-                                <div class="uk-card-body services-card-body">
-                                    <h3 class="uk-card-title">Supported Independent Living</h3>
-                                    <p>Empowering you to live independently with personalized support and a comfortable,
-                                        safe home environment.</p>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default">
+                                    <div class="uk-card-media-top">
+                                        <img src="resources/images/Support-Coordination.webp" class="service-carousel-image" alt="Image showing Support Coordination">
+                                    </div>
+                                    <div class="uk-card-body services-card-body">
+                                        <h3 class="uk-card-title">Support Coordination</h3>
+                                        <p>Guiding you through your NDIS plan, helping you connect with the right services,
+                                            and ensuring your needs are met.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default">
+                                    <div class="uk-card-media-top">
+                                        <img src="resources/images/Free-Access-NDIS.webp" class="service-carousel-image" alt="Image showing Free Access to NDIS">
+                                    </div>
+                                    <div class="uk-card-body services-card-body">
+                                        <h3 class="uk-card-title">Free NDIS Program Support</h3>
+                                        <p>We provide free assistance to help you navigate and access the NDIS, ensuring you
+                                            get the support you deserve.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default">
+                                    <div class="uk-card-media-top">
+                                        <img src="resources/images/Short-Term-Accommodation.webp" class="service-carousel-image" alt="Image showing Short Term Accommodation">
+                                    </div>
+                                    <div class="uk-card-body services-card-body">
+                                        <h3 class="uk-card-title">Short Term Accommodation</h3>
+                                        <p>Offering flexible and comfortable short-term accommodation with the support you
+                                            need for a peaceful stay.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default">
+                                    <div class="uk-card-media-top">
+                                        <img src="resources/images/Assisting-Daily-Personal-Activities.webp" class="service-carousel-image" alt="Image showing Assisting with Daily Personal Activities">
+                                    </div>
+                                    <div class="uk-card-body services-card-body">
+                                        <h3 class="uk-card-title">Assisting with Daily Personal Activities</h3>
+                                        <p>Helping with daily tasks like personal care, meal preparation, and more to ensure
+                                            you live with independence and dignity.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default">
+                                    <div class="uk-card-media-top">
+                                        <img src="resources/images/Community-Participation.webp" class="service-carousel-image" alt="Image showing Community Participation">
+                                    </div>
+                                    <div class="uk-card-body services-card-body">
+                                        <h3 class="uk-card-title">Community Participation</h3>
+                                        <p>Supporting you to engage in social, recreational, and community activities, fostering
+                                            connections and building confidence.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default">
+                                    <div class="uk-card-media-top">
+                                        <img src="resources/images/Helping-Household-Tasks.webp" class="service-carousel-image" alt="Image showing Helping with Household Tasks">
+                                    </div>
+                                    <div class="uk-card-body services-card-body">
+                                        <h3 class="uk-card-title">Helping with Household Tasks</h3>
+                                        <p>Assisting with household chores and organizing your home, so you can focus on
+                                            what matters most to you.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default">
+                                    <div class="uk-card-media-top">
+                                        <img src="resources/images/Transport.webp" class="service-carousel-image" alt="Image showing Transport">
+                                    </div>
+                                    <div class="uk-card-body services-card-body">
+                                        <h3 class="uk-card-title">Assisting with Transport</h3>
+                                        <p>Providing reliable and safe transport to get you to appointments, social events, or
+                                            any activities you enjoy.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <div class="uk-card uk-card-default carousel-card-full-height">
-                                <div class="uk-card-media-top">
-                                    <img src="resources/images/Support-Coordination.webp" class="service-carousel-image" alt="Image showing Support Coordination">
-                                </div>
-                                <div class="uk-card-body services-card-body">
-                                    <h3 class="uk-card-title">Support Coordination</h3>
-                                    <p>Guiding you through your NDIS plan, helping you connect with the right services,
-                                        and ensuring your needs are met.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="uk-card uk-card-default carousel-card-full-height">
-                                <div class="uk-card-media-top">
-                                    <img src="resources/images/Free-Access-NDIS.webp" class="service-carousel-image" alt="Image showing Free Access to NDIS">
-                                </div>
-                                <div class="uk-card-body services-card-body">
-                                    <h3 class="uk-card-title">Free NDIS Program Support</h3>
-                                    <p>We provide free assistance to help you navigate and access the NDIS, ensuring you
-                                        get the support you deserve.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="uk-card uk-card-default carousel-card-full-height">
-                                <div class="uk-card-media-top">
-                                    <img src="resources/images/Short-Term-Accommodation.webp" class="service-carousel-image" alt="Image showing Short Term Accommodation">
-                                </div>
-                                <div class="uk-card-body services-card-body">
-                                    <h3 class="uk-card-title">Short Term Accommodation</h3>
-                                    <p>Offering flexible and comfortable short-term accommodation with the support you
-                                        need for a peaceful stay.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="uk-card uk-card-default carousel-card-full-height">
-                                <div class="uk-card-media-top">
-                                    <img src="resources/images/Assisting-Daily-Personal-Activities.webp" class="service-carousel-image" alt="Image showing Assisting with Daily Personal Activities">
-                                </div>
-                                <div class="uk-card-body services-card-body">
-                                    <h3 class="uk-card-title">Assisting with Daily Personal Activities</h3>
-                                    <p>Helping with daily tasks like personal care, meal preparation, and more to ensure
-                                        you live with independence and dignity.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="uk-card uk-card-default carousel-card-full-height">
-                                <div class="uk-card-media-top">
-                                    <img src="resources/images/Community-Participation.webp" class="service-carousel-image" alt="Image showing Community Participation">
-                                </div>
-                                <div class="uk-card-body services-card-body">
-                                    <h3 class="uk-card-title">Community Participation</h3>
-                                    <p>Supporting you to engage in social, recreational, and community activities, fostering
-                                        connections and building confidence.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="uk-card uk-card-default carousel-card-full-height">
-                                <div class="uk-card-media-top">
-                                    <img src="resources/images/Helping-Household-Tasks.webp" class="service-carousel-image" alt="Image showing Helping with Household Tasks">
-                                </div>
-                                <div class="uk-card-body services-card-body">
-                                    <h3 class="uk-card-title">Helping with Household Tasks</h3>
-                                    <p>Assisting with household chores and organizing your home, so you can focus on
-                                        what matters most to you.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="uk-card uk-card-default carousel-card-full-height">
-                                <div class="uk-card-media-top">
-                                    <img src="resources/images/Transport.webp" class="service-carousel-image" alt="Image showing Transport">
-                                </div>
-                                <div class="uk-card-body services-card-body">
-                                    <h3 class="uk-card-title">Assisting with Transport</h3>
-                                    <p>Providing reliable and safe transport to get you to appointments, social events, or
-                                        any activities you enjoy.</p>
-                                </div>
-                            </div>
-                        </div>
+                
+                        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
+                        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next"></a>
+                
                     </div>
-            
-                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
-                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next"></a>
                 
                     <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
                 
@@ -266,25 +276,5 @@
         </div>
     </main>
     <script src="js/footerYear.js"></script>
-    <script>
-        function updateClassBasedOnWidth() {
-            const carouselItems = document.getElementById('carousel-items');
-            const width = window.innerWidth;
-
-            if (width < 768) { // Mobile
-                carouselItems.className = 'uk-slider-items uk-child-width-1-1 uk-grid';
-            } else if (width >= 768 && width < 1024) { // Tablets
-                carouselItems.className = 'uk-slider-items uk-child-width-1-2 uk-grid';
-            } else { // Desktop
-                carouselItems.className = 'uk-slider-items uk-child-width-1-3 uk-grid';
-            }
-        }
-
-        // Initial check
-        updateClassBasedOnWidth();
-
-        // Update on resize
-        window.addEventListener('resize', updateClassBasedOnWidth);
-    </script>
 </body>
 </html>

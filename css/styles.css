@@ -164,6 +164,25 @@ video {
     object-fit: cover;
 }
 
+
+.about-us-image{
+    width: 100%; 
+    height: auto; 
+    display: flex; 
+    justify-content: center;
+}
+
+@media (width > 600px){
+    .about-us-image{
+        height: 300px;
+        width: auto;
+    }
+}
+
+.carousel-card-full-height{
+    height: 100%;
+}
+
 /* LAYOUT - SERVICE DETAILS */
 
 .service-details-hero{
