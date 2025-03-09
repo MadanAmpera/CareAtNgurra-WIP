@@ -118,6 +118,12 @@ h1, h2{
     height: 10vh;
 }
 
+@media (width > 600px){
+    .page-hero{
+        height: 90vh;
+    }
+}
+
 /* LAYOUT - HOME*/
 
 .site-hero{
