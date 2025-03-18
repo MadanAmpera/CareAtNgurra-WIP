@@ -143,17 +143,17 @@ h1, h2{
     position: relative;
     width: 100%;
     height: 100%;
-  }
-  
-  .background {
+}
+
+.background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-  }
-  
-  .overlay {
+}
+
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -161,7 +161,7 @@ h1, h2{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Red with opacity */
     z-index: 1; /* Ensures this div is on top */
-  }
+}
 
 video {
     min-width: 100%;
@@ -210,6 +210,10 @@ video {
     justify-self: center;
     align-self: center;
 }
+
+/* LAYOUT - TESTIMONIALS*/
+
+
 
 /* HTML FORM CHECK */
 .answer-reason{
