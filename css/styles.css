@@ -85,6 +85,29 @@ h1, h2{
     align-items: center;
 }
 
+.desktop-header{
+    background-color: rgb(250,  244,  238);
+    display: none;
+}
+
+.desktop-header a{
+    color: rgb(53, 64, 102) !important;
+    font-size: 1.3rem;
+}
+
+.desktop-services-dropdown a{
+    color: rgb(250,  244,  238) !important;
+}
+
+@media (width > 1400px){
+    .mobile-header{
+        display: none;
+    }
+    .desktop-header{
+        display: block;
+    }
+}
+
 /* LAYOUT - MENU */
 
 .uk-nav-sub li{
