@@ -92,14 +92,14 @@ h1, h2{
 
 .desktop-header a{
     color: rgb(53, 64, 102) !important;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .desktop-services-dropdown a{
     color: rgb(250,  244,  238) !important;
 }
 
-@media (width > 1400px){
+@media (width > 1024px){
     .mobile-header{
         display: none;
     }
