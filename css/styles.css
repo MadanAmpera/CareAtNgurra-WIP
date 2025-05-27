@@ -99,7 +99,7 @@ h1, h2{
     color: rgb(250,  244,  238) !important;
 }
 
-@media (width > 1024px){
+@media (width > 1280px){
     .mobile-header{
         display: none;
     }
