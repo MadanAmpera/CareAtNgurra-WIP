@@ -43,6 +43,31 @@ h1, h2{
     z-index: 9999;
 }
 
+.floating-button-mobile{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+.floating-button-desktop{
+    display: none;
+}
+
+@media (width > 768px){
+    .floating-button{
+        height: 60px;
+        width: 60px;
+        border-radius: 30px;
+    }
+    .floating-button-mobile{
+        display: none;
+    }
+    .floating-button-desktop{
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+    }
+}
+
 .uk-form-label{
     color: rgb(53, 64, 102) !important;
     font-size: 1.1rem !important;
